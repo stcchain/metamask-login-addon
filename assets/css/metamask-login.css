@@ -1,0 +1,211 @@
+/**
+ * MetaMask Login Add-On Styles
+ */
+
+/* Login Button */
+.metamask-login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5841f !important;
+    border: none !important;
+    color: white !important;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: none;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+}
+
+.metamask-login-button:hover {
+    background-color: #e2761b !important;
+}
+
+.metamask-login-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.metamask-login-button .metamask-loading {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: metamask-spin 1s ease-in-out infinite;
+    margin-right: 8px;
+}
+
+@keyframes metamask-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Login Container */
+.metamask-login-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.metamask-login-or {
+    display: flex;
+    align-items: center;
+    color: #777;
+    margin: 20px 0;
+}
+
+.metamask-login-or:before,
+.metamask-login-or:after {
+    content: "";
+    flex-grow: 1;
+    background: rgba(0, 0, 0, 0.1);
+    height: 1px;
+    margin: 0 10px;
+}
+
+.metamask-login-status {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    display: none;
+}
+
+.metamask-login-status.error {
+    background-color: #ffebeb;
+    color: #d63638;
+    border: 1px solid #ffb8b8;
+    display: block;
+}
+
+.metamask-login-status.success {
+    background-color: #edfaef;
+    color: #00a32a;
+    border: 1px solid #b8ffb9;
+    display: block;
+}
+
+.metamask-login-status.info {
+    background-color: #f0f6fc;
+    color: #2271b1;
+    border: 1px solid #c7d9ed;
+    display: block;
+}
+
+/* Profile Section */
+.metamask-profile-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.metamask-profile-section h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.metamask-address-empty,
+.metamask-address-connected {
+    margin-bottom: 15px;
+}
+
+.metamask-address-display {
+    font-family: monospace;
+    background: #f5f5f5;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    word-break: break-all;
+}
+
+/* Admin profile styling */
+.user-edit-php .metamask-wallet-field,
+.profile-php .metamask-wallet-field {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+#metamask_wallet_address {
+    font-family: monospace;
+    background: #f5f5f5;
+}
+
+#metamask-connect-status {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+#metamask-connect-status.success {
+    background-color: #edfaef;
+    color: #00a32a;
+}
+
+#metamask-connect-status.error {
+    background-color: #ffebeb;
+    color: #d63638;
+}
+
+/* Shortcode styles */
+.metamask-shortcode-login {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.metamask-shortcode-profile {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.metamask-address-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.metamask-address-info img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.metamask-action-buttons {
+    margin-top: 15px;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 600px) {
+    .metamask-address-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .metamask-address-info img {
+        margin-bottom: 10px;
+    }
+    
+    .metamask-login-button {
+        padding: 10px;
+    }
+}
